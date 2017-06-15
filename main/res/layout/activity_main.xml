@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp" tools:context="com.example.shaun.smartgesture.MainActivity"
+    android:weightSum="1"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/mousepad"
+            android:layout_above="@+id/conButton"
+            android:clickable="true"
+            android:id="@+id/mousePad"
+
+            />
+
+        <android.gesture.GestureOverlayView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gespad"
+            android:layout_above="@+id/conButton"
+            android:clickable="true"
+            android:id="@+id/gesPad"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        style="@android:style/DeviceDefault.ButtonBar"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gesbtn"
+            android:id="@+id/gesButton"
+            android:text="Gesture"
+            android:gravity="bottom|center_horizontal"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.33"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/conbtn"
+            android:id="@+id/conButton"
+            android:text="Connect"
+            android:gravity="bottom|center_horizontal"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.33"
+            />
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setbtn"
+            android:id="@+id/setButton"
+            android:text="Settings"
+            android:gravity="bottom|center_horizontal"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="0.33"/>
+    </LinearLayout>
+</LinearLayout>
